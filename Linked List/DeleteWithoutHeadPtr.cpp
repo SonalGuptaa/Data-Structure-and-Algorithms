@@ -9,8 +9,6 @@ struct Node {
   }
 }*head;
 
-
-
 class Solution
 {
     public:

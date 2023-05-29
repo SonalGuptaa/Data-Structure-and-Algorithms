@@ -8,7 +8,7 @@
         {
             return 0;
         }
-        for(int i=5;i*i<=6;i=i+6)
+        for(int i=5;i*i<=n;i=i+6)
         {
             if(n%i==0 || n%(i+1)==0)
             {
