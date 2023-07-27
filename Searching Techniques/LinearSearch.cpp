@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool search(int arr[],int key)
+bool search(int arr[],intint key)
 {
-    for(int i=0;i<arr.size();i++)
+    for(int i=0;i<n;i++)
     {
         if(arr[i]==key)
         {
