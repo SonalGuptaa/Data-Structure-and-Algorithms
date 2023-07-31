@@ -1,96 +1,31 @@
-#include<bits/stdc++.h>
-using namespace std;
-class Stack{
+class MyStack {
+public:
+    MyStack() {
+        
+    }
     queue<int> q1,q2;
-    public:
-    void push(int x)
-    {
-        if(q1.empty())
+    void push(int x) {
+        q2.push(x);
+        while(!q1.empty())
         {
-            q1.push(x);
+            q2.push(q1.front());
+            q1.pop();
         }
-        else
-        {
-            q2.push(x);
-        }
+        swap(q1,q2);
     }
-    void pop()
-    {
-        //This is a queue soo the rear element of queue is the top element if stack
-        if(q1.empty()) //Elements are in q2
-        {
-            while(!q2.empty())
-            {
-                int front=q2.front();
-                q2.pop();
-                if(q2.empty())
-                {
-                    break;
-                }
-                q1.push(front);
-            }
-        }
-        if(q2.empty()) //Elememts are q1
-        {
-            while(!q1.empty())
-            {
-                int front=q1.front();
-                q1.pop();
-                if(q1.empty())
-                {
-                    break;
-                }
-                q2.push(front);
-            }
-        }
+    
+    int pop() {
+        // return q1.pop();
+        int top = q1.front();
+        q1.pop();
+        return top;
     }
-    int top()
-    {
-        if(q1.empty())
-        {
-            while(!q2.empty())
-            {
-                int front=q2.front();
-                q2.pop();
-                q1.push(front);
-                if(q2.empty())
-                {
-                    return front;
-                }
-            }
-        }
-        if(q2.empty())
-        {
-            while(!q1.empty())
-            {
-                int front=q1.front();
-                q1.pop();
-                q2.push(front);
-                if(q1.empty())
-                {
-                    return front;
-                }
-            }
-        }
+    
+    int top() {
+        return q1.front();
     }
-    bool empty()
-    {
-        return q1.empty() and q2.empty();
+    
+    bool empty() {
+        return q1.empty();
     }
-
 };
-int main()
-{
-  Stack s;
-  s.push(1);
-  s.push(2);
-  s.pop();
-  s.push(3);
-  s.push(4);
-  s.push(5);
-  while(!s.empty())
-  {
-    cout<<s.top();
-    s.pop();
-  }
-}
