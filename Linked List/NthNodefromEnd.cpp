@@ -1,17 +1,4 @@
- #include<bits/stdc++.h>
-using namespace std;
-struct Node{
-    int data;
-    Node *next;
-    Node(int d)
-    {
-        data=d;
-        next=NULL;
-    }
-};
-void PrintNthNode(Node *head,int x)
-{
-    Node *curr;
+  Node *curr;
     int cnt=0;
     for(curr=head;curr!=NULL;curr->next)
     {
@@ -26,5 +13,18 @@ void PrintNthNode(Node *head,int x)
     
         curr=curr->next;
    
-    cout<<curr->data;
+    cout<<curr->data;#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+    int data;
+    Node *next;
+    Node(int d)
+    {
+        data=d;
+        next=NULL;
+    }
+};
+void PrintNthNode(Node *head,int x)
+{
+   
 }

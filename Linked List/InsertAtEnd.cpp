@@ -45,6 +45,6 @@ int main()
     head=insertEnd(head,30);
     head=insertEnd(head,20);
     head=insertEnd(head,10);
-       head=insertEnd(head,100);
+    head=insertEnd(head,100);
     printList(head);
 }
