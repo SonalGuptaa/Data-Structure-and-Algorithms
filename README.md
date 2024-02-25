@@ -46,4 +46,4 @@ Data structures and algorithms are fundamental concepts in computer science and 
 - [Heap](https://www.geeksforgeeks.org/heap-data-structure/)
 - [Graph](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 - [Greedy](https://www.geeksforgeeks.org/greedy-algorithms/)
-- [Backtarcking](https://www.geeksforgeeks.org/backtracking-algorithms/)
+- [Backtracking](https://www.geeksforgeeks.org/backtracking-algorithms/)
